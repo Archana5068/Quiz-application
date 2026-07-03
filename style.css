@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+#question-number {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2563eb;
+}
+
+#question {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #e2e8f0;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.option:hover {
+    background: #93c5fd;
+}
+
+.option.selected {
+    background: #2563eb;
+    color: white;
+}
+
+/* Button Container */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Common Button Style */
+button {
+    flex: 1;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Disabled Back Button */
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.hide {
+    display: none;
+}
+
+#result {
+    text-align: center;
+}
+
+#score {
+    margin: 20px 0;
+    font-size: 24px;
+    color: green;
+}
+
+/* Restart Button */
+#restartBtn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media(max-width:600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+
+    .option {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    #restartBtn {
+        width: 100%;
+    }
+
+}
